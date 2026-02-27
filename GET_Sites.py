@@ -1,6 +1,5 @@
 import http.client
-import pprint as pp
-from pprint import pprint
+from pprint import pprint as pp
 
 api_key = input("Enter the X-API-Key: ")
 conn = http.client.HTTPSConnection("api.ui.com")
@@ -13,4 +12,3 @@ conn.request("GET", "/v1/sites?pageSize=10&nextToken=602232A870250000000006C514F
 res = conn.getresponse()
 data = res.read()
 pp(data)
-#pp(data.decode("utf-8"))
